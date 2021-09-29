@@ -1,0 +1,22 @@
+enemy[1].x += bg_x[1]
+       enemy[2].x += bg_x[2]
+       enemy[3].x += bg_x[3]
+       enemy[4].x += bg_x[4]
+       enemy[5].x += bg_x[5]
+       enemy[6].x += bg_x[6]
+       enemy[7].x += bg_x[7]
+       enemy[8].x += bg_x[8]
+       enemy[9].x += bg_x[9]
+       enemy[10].x += bg_x[10]
+
+
+        for i in range1:
+           enemy.append(enemy_class(width * i + 300,280))
+           enemy[i].x += bg_x[i]
+
+
+       for i in enemy:
+           enemy_Rect.append(window.blit(i.enemy,(i.x, i.y)))
+       for i in enemy_Rect:
+           if player1.colliderect(i):
+             game_over = True
